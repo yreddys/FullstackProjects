@@ -1,0 +1,6 @@
+com\studentportal\studentportalapi\service\StudentService.class
+com\studentportal\studentportalapi\service\StudentServiceInterface.class
+com\studentportal\studentportalapi\model\Student.class
+com\studentportal\studentportalapi\repository\StudentRepository.class
+com\studentportal\studentportalapi\StudentportalapiApplication.class
+com\studentportal\studentportalapi\controller\StudentController.class
