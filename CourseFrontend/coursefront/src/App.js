@@ -5,21 +5,22 @@ import Header from './components/Header';
 import AddCourse from './components/AddCourse';
 import ViewCourses from './components/ViewCourses'; 
 import Home from './components/Home';
+import EnrollForm from './components/EnrollForm'; 
 
 const App = () => {
   return (
-      <div style={{ paddingBottom: '50px' }}> 
-          <Router>
-              <Header />
-              <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/View-Courses" element={<ViewCourses />} />
-                  <Route path="/AddCourse" element={<AddCourse />} />
-                 
-              </Routes>
-              <Footer />
-          </Router>
-      </div>
+    <div style={{ paddingBottom: '50px' }}> 
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/View-Courses" element={<ViewCourses />} />
+          <Route path="/AddCourse" element={<AddCourse />} />
+          <Route path="/EnrollForm" element={<EnrollForm />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
