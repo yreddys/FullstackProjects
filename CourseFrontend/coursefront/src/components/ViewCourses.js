@@ -1,10 +1,10 @@
-// src/components/ViewCourses.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const ViewCourses = () => {
     const [courses, setCourses] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchCourses = async () => {
@@ -18,6 +18,10 @@ const ViewCourses = () => {
 
         fetchCourses();
     }, []);
+
+    const handleEnroll = (course) => {
+        navigate('/EnrollForm', { state: { course } });
+    };
 
     return (
         <div style={containerStyle}>
@@ -36,6 +40,7 @@ const ViewCourses = () => {
                                     style={imageStyle}
                                 />
                             )}
+                            <button onClick={() => handleEnroll(course)}>Enroll</button>
                         </li>
                     ))}
                 </ul>
